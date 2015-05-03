@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Nadia: {% block title %} {% endblock %} </title>
+    <link href='http://fonts.googleapis.com/css?family=Overlock:400,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'main.css')}}" />
+</head>
+<body>
+    <div id="12 wrapper">
+        <div id="header">
+<div class="grid">
+
+        <div class="row">
+            <div class="col-3" id = "name">
+                <h1>Nadia Magallon</h1>
+                <p class = "header">magallon@mit.edu</p>
+                <p class = "header">229 Vassar St.</p>
+                <p class = "header">Cambridge, MA 02139</p>
+            </div>
+            <div class ="col-3">
+            </div>
+
+            <div class="col-2 h2" id="menu">
+                <ul><li>
+                <a href="{{ url_for('index') }}">Home</a>
+                </li></ul>
+            </div>
+
+            <div class="col-2 h2" id="menu">
+                <ul>
+                <li>
+                <a href="{{ url_for('artPortfolio') }}">Art Portfolio</a>
+                </li>
+                </ul>
+            </div>
+    
+            <div class="col-2 end" id="menu">
+            <ul>
+            <li>
+                <a href="https://www.linkedin.com/pub/nadia-magallon/46/562/b13" target = "_blank">
+                    LinkedIn                    
+                </a> 
+                </li></ul>
+            </div>
+        </div>
+
+        </div>
+
+        <div id="content">
+            {% block content %} {% endblock %}
+        </div>
+    </div>
+
+</body>
+</html>
