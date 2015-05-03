@@ -1,1 +1,1 @@
-web: python FlaskWebPage-Nadia.py
+web: gunicorn  FlaskWebPage-Nadia:app
